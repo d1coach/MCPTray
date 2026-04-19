@@ -1,6 +1,6 @@
 name: MCPTray
 options:
-  bundleIdPrefix: com.evgenybik
+  bundleIdPrefix: io.github.d1coach
   deploymentTarget:
     macOS: "26.0"
   createIntermediateGroups: true
@@ -40,4 +40,4 @@ targets:
       - package: TOMLKit
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.evgenybik.mcptray
+        PRODUCT_BUNDLE_IDENTIFIER: io.github.d1coach.mcptray

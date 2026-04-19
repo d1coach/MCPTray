@@ -49,7 +49,7 @@ cd MCPTray && git pull && ./build.sh
 ```bash
 osascript -e 'tell application "MCPTray" to quit'
 rm -rf /Applications/MCPTray.app
-defaults delete com.evgenybik.mcptray  # forgets tracked folders
+defaults delete io.github.d1coach.mcptray  # forgets tracked folders
 ```
 
 ## Development
