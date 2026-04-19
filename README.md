@@ -7,8 +7,6 @@ Point it at a project folder; it reads the local MCP config and exposes
 per-server on/off toggles. Non-destructive: disabling a server never
 deletes its command/args/env.
 
-![screenshot placeholder](docs/screenshot.png)
-
 ## What it reads/writes
 
 | Agent | Reads | Disables via |
