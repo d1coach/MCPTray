@@ -1,0 +1,35 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build (macOS 26, Xcode 26)
+    runs-on: macos-15  # bump to macos-26 once GitHub offers it
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install xcodegen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Build (Debug)
+        run: |
+          xcodebuild \
+            -project MCPTray.xcodeproj \
+            -scheme MCPTray \
+            -configuration Debug \
+            -destination 'platform=macOS' \
+            -derivedDataPath build \
+            build \
+            CODE_SIGN_IDENTITY=- CODE_SIGNING_REQUIRED=NO
+
+      - name: Verify .app produced
+        run: test -d build/Build/Products/Debug/MCPTray.app
