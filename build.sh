@@ -16,14 +16,14 @@ xcodebuild \
   -scheme MCPTray \
   -configuration Release \
   -derivedDataPath build \
-  -destination 'platform=macOS' \
+  -destination 'platform=macOS,arch=arm64' \
   build \
   | xcbeautify 2>/dev/null || xcodebuild \
       -project MCPTray.xcodeproj \
       -scheme MCPTray \
       -configuration Release \
       -derivedDataPath build \
-      -destination 'platform=macOS' \
+      -destination 'platform=macOS,arch=arm64' \
       build > build.log
 
 APP_SRC="build/Build/Products/Release/MCPTray.app"
