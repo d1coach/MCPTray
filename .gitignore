@@ -37,3 +37,32 @@ Package.resolved
 *.p12
 .env
 .env.local
+.netrc
+secrets.xcconfig
+local.xcconfig
+
+# Distribution artifacts (archives, installers)
+*.xcarchive/
+*.dmg
+*.pkg
+*.zip
+release/
+releases/
+dist/
+
+# Debug symbols
+*.dSYM/
+*.dSYM.zip
+
+# Code coverage
+*.profraw
+*.profdata
+*.xccovreport
+*.xccovarchive
+
+# Backups / scratch
+*.bak
+*.backup
+*.orig
+*.rej
+~$*
