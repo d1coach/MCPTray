@@ -28,7 +28,7 @@ Requires macOS 26 Tahoe, Xcode 26+, and
 
 ```bash
 brew install xcodegen
-git clone https://github.com/<you>/MCPTray.git
+git clone https://github.com/d1coach/MCPTray.git
 cd MCPTray && ./build.sh
 ```
 
